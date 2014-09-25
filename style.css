@@ -1,0 +1,130 @@
+*{
+	box-sizing: border-box;
+}
+
+section {
+	margin-top: 0px;
+}
+	section:nth-child(even) .alt-font{
+		color: rgb(32,120,236);
+	}
+
+	section:nth-child(even) .alt-bg {
+		background: rgb(32,120,236);
+	}
+
+	section:nth-child(even) .alt-pointer{
+		border-right: solid 10px rgb(32,120,236);;
+	}
+
+
+.container {
+	margin-top: 25px;
+	font-family: 'Oxygen', 'Trebuchet MS', 'Helvetica', sans-serif;
+}
+
+.left-column {
+	float: left;
+	width: 200px;
+	text-align: right;
+}
+	.left-column h2,
+	.left-column h5 {
+		margin: 0px;
+
+	}
+	
+	.left-column h5{
+		color: #aaa;
+	}
+
+	.left-column h2 {
+		margin-top: -5px;
+		font-size: 2.0em;
+		color: rgb(179,217,255);
+
+	}
+
+section::after {
+	content:"";
+	display: table;
+	clear: both;
+}
+	
+
+
+
+.mid-column{
+	float: left;
+	width: 100px;
+}
+	.outercircle {
+		position: relative;
+		margin: 0px auto;
+		width: 62px;
+		height: 62px;
+		top: -5px;
+		border-radius: 50%;
+		background: rgb(179,217,255);
+	}
+		
+		.innercircle {
+		position: absolute;
+		margin: 0px auto;
+		width: 46px;
+		height: 46px;
+		border-radius: 50%;
+		background: rgb(32,120,236);
+		top: 8px;
+		left: 8px;
+		}
+	
+	.straightline {
+		position: relative;
+		
+		/* gives effect as if it is connected to outer-circle*/
+		top: -5px;
+		margin: 0px auto;
+		width: 10px;
+		
+		/*must add height back from 'top'
+		 so that it fits evenly in .mid-column div*/
+		height: 400px;
+		background: rgb(179,217,255);
+		/*border-bottom: 33px solid black;
+		border-top: 10px solid black;*/
+	}
+
+.right-column{
+	float: left;
+	width: 650px;}
+
+	.pointer {
+		float: left;
+
+		/* if you only specify borders w/o height on a div 
+		it will	only show the connectors, i.e. the corners....
+		 this trick makes 3 of the border connectors invisible
+		and one side visible-thus a triangle */
+		border: solid 10px transparent;
+		border-right: solid 10px rgb(179,217,255);
+		margin-top: 44px;
+	}
+
+	.infobox{
+		float: left;
+		width: 600px;
+		min-height: 200px;
+		border-radius: 1%;
+		background: rgb(179,217,255);
+		padding: 40px 40px;
+		color: #fff;
+	}
+
+	.infobox h1{
+		margin: 0px;
+		font-size: 1.6em;
+		padding-bottom: 8px;
+		border-bottom: 1px #ddd solid;
+
+	}
